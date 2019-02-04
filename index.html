@@ -134,13 +134,12 @@
 
                 if (cpuChose === "s") { cpuChose = "THE SCISSORS"};
 
-
                 cpuText.textContent = "The Demon chose: " + cpuChose;
 
                 wonText.textContent = "YOU HAVE BESTED THE DEMON: " + won;
-                // I feel like i could put an if/else statement here that after 10 recorded wins or loses you could end the game with a game over screen and graphic and ask the playerOne to start over?                
+                // I feel like i could put an if/else statement here that after 10 recorded wins or loses you could end the game with a game over screen and graphic and ask the playerOne to start over?/               
                 lostText.textContent = "THE DEMON HAS DEFEATED YOU: " + lost;
-
+                // something like if (lost === 10) { ....textcontent = "ALL IS LOST"};  generate a temp splash page then restart the document.onkeyup = function (event)/
                 drawText.textContent = "A DRAW HELPS NO ONE HERE: " + draw;
 
             }
