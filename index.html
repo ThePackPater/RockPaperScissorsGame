@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <title>RPS</title>
-
+    <!---- I do not own the premise nor the rights to castle grayskull it was just a cool pic--->
     <style>
 
         body {
@@ -16,7 +16,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-family: 'ZCOOL KuaiLe', cursive;
             color: white;
 
@@ -38,7 +38,7 @@
         <h1><b>Welcome Warrior! Choose your weapon!</b></h1>
 
         <ul>
-
+            
             <li><b>Press "R" for ROCK!</b></li><br>
 
 
@@ -56,7 +56,7 @@
 
     <div>
 
-        <h3 id="directions-text"><b>Press r, p or s to begin!</b></h3><br>
+        <h3 id="directions-text"><b>Press r, p, or s to begin!</b></h3><br>
 
         <h3 id="playerone-text"><b></b></h3><br>
 
@@ -71,7 +71,7 @@
     </div>
 
     <script type="text/javascript">
-
+       
         var cpuRdm = ["r", "p", "s"];
 
         var won = 0;
@@ -93,9 +93,9 @@
         var drawText = document.getElementById("draw-text");
 
         document.onkeyup = function (event) {
-
+             //Could i make the R,P,S touch sensitive for a mobile response?!?/
             var playerOneChose = event.key;
-
+            // google document.touchenter =  function (event) how would you have to change the array?!/
             var cpuChose = cpuRdm[Math.floor(Math.random() * cpuRdm.length)];
 
             if ((playerOneChose === "r") || (playerOneChose === "p") || (playerOneChose === "s")) {
@@ -141,6 +141,7 @@
                 lostText.textContent = "THE DEMON HAS DEFEATED YOU: " + lost;
                 // something like if (lost === 10) { ....textcontent = "ALL IS LOST"};  generate a temp splash page then restart the document.onkeyup = function (event)/
                 drawText.textContent = "A DRAW HELPS NO ONE HERE: " + draw;
+                //maybe even when the keystrokes stop a message could pop up "hast thou surrendered?!"/
 
             }
         }
