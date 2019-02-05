@@ -38,7 +38,7 @@
         <h1><b>Welcome Warrior! Choose your weapon!</b></h1>
 
         <ul>
-            
+
             <li><b>Press "R" for ROCK!</b></li><br>
 
 
@@ -73,7 +73,7 @@
     </div>
 
     <script type="text/javascript">
-       
+
         var cpuRdm = ["r", "p", "s"];
 
         var won = 0;
@@ -95,7 +95,7 @@
         var drawText = document.getElementById("draw-text");
 
         document.onkeyup = function (event) {
-             //Could i make the R,P,S touch sensitive for a mobile response?!?/
+            //Could i make the R,P,S touch sensitive for a mobile response?!?/
             var playerOneChose = event.key;
             // google document.touchenter =  function (event) how would you have to change the array?!/
             var cpuChose = cpuRdm[Math.floor(Math.random() * cpuRdm.length)];
@@ -122,50 +122,47 @@
 
                 directionsText.textContent = "";
 
-                if (playerOneChose === "r") { playerOneChose = "THE ROCK"};
+                if (playerOneChose === "r") { playerOneChose = "THE ROCK" };
 
-                if (playerOneChose === "p") { playerOneChose = "THE PAPER"};
+                if (playerOneChose === "p") { playerOneChose = "THE PAPER" };
 
-                if (playerOneChose === "s") { playerOneChose = "THE SCISSORS"}; 
+                if (playerOneChose === "s") { playerOneChose = "THE SCISSORS" };
 
                 playerOneText.textContent = "Your weapon was: " + playerOneChose;
 
-                if (cpuChose === "r") { cpuChose = "THE ROCK"}; 
+                if (cpuChose === "r") { cpuChose = "THE ROCK" };
 
-                if (cpuChose === "p") { cpuChose = "THE PAPER"}; 
+                if (cpuChose === "p") { cpuChose = "THE PAPER" };
 
-                if (cpuChose === "s") { cpuChose = "THE SCISSORS"};
+                if (cpuChose === "s") { cpuChose = "THE SCISSORS" };
 
                 cpuText.textContent = "The Demon chose: " + cpuChose;
-                
+
                 wonText.textContent = "YOU HAVE BESTED THE DEMON: " + won;
-               
-                    if (won == 11){
-      
-                    alert ("YOU HAVE DEFEATED THE DEMON!!");
+
+                if (won == 11) {
+
+                    alert("YOU HAVE DEFEATED THE DEMON!!");
 
                     confirm("Would you like to try again?");
 
                     location.reload(true);
 
-                    }
-                        
+                }
+
                 lostText.textContent = "THE DEMON HAS DEFEATED YOU: " + lost;
 
-                    if (lost == 11){
-      
-                    alert ("ALL IS LOST!! THE DEMON HAS DEFEATED YOU!!");
+                if (lost == 11) {
+
+                    alert("ALL IS LOST!! THE DEMON HAS DEFEATED YOU!!");
 
                     confirm("would you like to try again?");
 
                     location.reload(true);
 
-                    }
-                        
+                }
+
                 drawText.textContent = "A DRAW HELPS NO ONE HERE: " + draw;
-
-                //maybe even when the keystrokes stop a message could pop up "hast thou surrendered?!"/
-
             }
         }
 
