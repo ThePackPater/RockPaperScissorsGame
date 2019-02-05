@@ -18,7 +18,7 @@
             background-size: cover;
             font-size: 1.5rem;
             font-family: 'ZCOOL KuaiLe', cursive;
-            color: white;
+            color: aquamarine;
 
             }
 
@@ -51,6 +51,8 @@
         </ul>
 
         <h2><b>The fate of our world depends on your choice!!</b></h2>
+
+  <!----<h3><b>You have 10 chances to defeat the Demon!!</b></h3>--->
 
     </div>
 
@@ -135,12 +137,33 @@
                 if (cpuChose === "s") { cpuChose = "THE SCISSORS"};
 
                 cpuText.textContent = "The Demon chose: " + cpuChose;
-
+                
                 wonText.textContent = "YOU HAVE BESTED THE DEMON: " + won;
-                // I feel like i could put an if/else statement here that after 10 recorded wins or loses you could end the game with a game over screen and graphic and ask the playerOne to start over?/               
+               
+                    if (won == 11){
+      
+                    alert ("YOU HAVE DEFEATED THE DEMON!!");
+
+                    confirm("Would you like to try again?");
+
+                    reload();
+
+                    }
+                        
                 lostText.textContent = "THE DEMON HAS DEFEATED YOU: " + lost;
-                // something like if (lost === 10) { ....textcontent = "ALL IS LOST"};  generate a temp splash page then restart the document.onkeyup = function (event)/
+
+                    if (lost == 11){
+      
+                    alert ("ALL IS LOST!! THE DEMON HAS DEFEATED YOU!!");
+
+                    confirm("would you like to try again?");
+
+                    reload();
+
+                    }
+                        
                 drawText.textContent = "A DRAW HELPS NO ONE HERE: " + draw;
+
                 //maybe even when the keystrokes stop a message could pop up "hast thou surrendered?!"/
 
             }
